@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="styl.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Righteous|Source+Sans+Pro&display=swap" rel="stylesheet">
+		<script src="js/other/jquery-3.4.1.slim.min.js"></script>
+    </head>
+    <body>
+        <div id="container" class="card-5">
+            <header>
+                <h1>🛥️ Statki 🛥️</h1>
+            </header>
+            <article>
+                <section class="gameControlContainer">
+                    <div class="gameControlLeft">
+                        <span id="gameInfoText">Rozmieść statki</span>
+                    </div>
+                    <div class="gameControlRight">
+                        <button id="gameRotateShipButton" onclick="game.stages[`preparation`].turn = !game.stages[`preparation`].turn">Obróć statek</button>
+                    </div>
+                    <div style="clear: both;"></div>
+                </section>
+                <section>
+                    <canvas id="gameCanvas" class="card-4" width="1050px" height="550px"></canvas>
+                    <script src="js/startCode.js"></script>
+                    <script src="js/Mouse.js"></script>
+                    <script src="js/Button.js"></script>
+                    <script src="js/Map.js"></script>
+                    <script src="js/game_stages/Finish.js"></script>
+                    <script src="js/game_stages/gameplay/AI.js"></script>
+                    <script src="js/game_stages/gameplay/Gameplay.js"></script>
+                    <script src="js/game_stages/preparation/AIPreparation.js"></script>
+                    <script src="js/game_stages/preparation/Preparation.js"></script>
+                    <script src="js/Game.js"></script>
+                    <script>let game = new Game();</script>
+                </section>
+                <section class="gameControlContainer">
+                    <div class="gameControlLeft gamePlayerInfo">
+                        Komputer
+                    </div>
+                    <div class="gameControlRight gamePlayerInfo">
+                        Gracz
+                    </div>
+                    <div style="clear: both;"></div>
+                </section>
+            </article>
+            <footer>
+                Kuba Janczak 2019
+            </footer>
+        </div>
+    </body>
+</html>
